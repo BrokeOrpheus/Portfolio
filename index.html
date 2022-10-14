@@ -30,7 +30,7 @@
       <div id="large-screen" class="d-none d-sm-block flex-grow-1">
         <!-- Site nav links -->
         <div id="nav-links" class="d-flex justify-content-end pe-4 h-100">
-          <a href="#" class="a-style">Home</a>
+          <a href="#hero" class="a-style">Home</a>
           <a href="#" class="a-style">Bio</a>
           <a href="#" class="a-style">Projects</a>
         </div>
@@ -43,7 +43,7 @@
         dropdown">
           <a href="#" class="dropdown-toggle a-style" data-bs-toggle="dropdown"><i class="fa-solid fa-bars"></i></a>
           <ul class="dropdown-menu dropdown-menu-dark flex-column">
-            <a href="#" class="a-style dropdown-item">Home</a>
+            <a href="#hero" class="a-style dropdown-item">Home</a>
             <a href="#" class="a-style dropdown-item">Projects</a>
             <a href="#" class="a-style dropdown-item">Bio</a>
           </ul>
@@ -52,13 +52,26 @@
     </nav>
 
     <!-- Hero -->
-    <section>
-      <div>
-        <!-- Name and Title -->
+    <section id="hero" class="d-flex position-relative w-100 justify-content-center align-items-center">
+      <img src="./images/benjamin-voros-phIFdC6lA4E-unsplash.jpg" class="img-fluid">
+      <div id="hero-text" class="position-absolute">
+        <a><h1 class="hero-style">Kyle Register</h1></a>
+        <h3 class="hero-style">Full Stack Student</h3>
       </div>
-      <div>
+      <div id="btns-box" class="d-flex position-absolute flex-column align-items-center">
         <!-- Fun Buttons -->
+        <h5 class="text-light mb-2">For Fun</h5>
+        <div id="fun-btns" class="d-flex position-relative">
+          <button id="bounce" class="btn btn-danger">Bounce</button>
+          <button id="wiggle" class="btn btn-danger ms-2">Wiggle</button>
+        </div>
       </div>
+    </section>
+
+    <!-- Bio -->
+    <section>
+      <div></div>
+      <p></p>
     </section>
 
     <!-- Projects -->

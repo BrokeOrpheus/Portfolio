@@ -1,10 +1,14 @@
+/* General */
 p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
 }
+
+/* Navbar */
 nav {
+  z-index: 1;
   min-height: 45px;
-  background-color: rgba(150, 150, 150, .6);
+  background-color: rgba(200, 200, 200, .8);
 }
 .dropdown-menu.show {
   display: flex;
@@ -35,4 +39,57 @@ ul a, ul a:hover {
 }
 i {
   font-size: 20px;
+}
+
+/* Hero */
+#hero-text {
+  top: 15%;
+}
+#hero-text:hover {
+  transform: rotate(360deg);
+  transition: transform 1s ease .2s;
+}
+.hero-style {
+  color: white;
+  background-color: rgba(50, 50, 50, .9);
+  border-radius: 15px;
+  padding: 0 5px 5px;
+  margin: 10px;
+}
+#btns-box {
+  bottom: 15%;
+}
+#bounce:active {
+  animation: bounce .2s linear 0s;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#wiggle:active {
+  animation: wiggle .2s linear 0s;
+}
+@keyframes wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
