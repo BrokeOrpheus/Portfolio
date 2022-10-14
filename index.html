@@ -9,24 +9,45 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/icons8-walter-white-16.png">
+    <script src="https://kit.fontawesome.com/d698bfc14b.js" crossorigin="anonymous"></script>
 
     <title>Kyle R</title>
   </head>
   <body>
     <!-- Nav -->
-    <nav>
-      <div>
-        <!-- Name w/ drop-down social links -->
+    <nav class="d-flex position-fixed w-100 align-items-center">
+      <div class="dropdown ps-3">
+        <a class="dropdown-toggle a-style-none" href="#" data-bs-toggle="dropdown"><h4 class="a-style">Kyle R</h4></a>
+
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <a href="#" class="dropdown-item"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="dropdown-item"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
       </div>
+      
 
       <!-- Large screen -->
-      <div>
+      <div id="large-screen" class="d-none d-sm-block flex-grow-1">
         <!-- Site nav links -->
+        <div id="nav-links" class="d-flex justify-content-end pe-4 h-100">
+          <a href="#" class="a-style">Home</a>
+          <a href="#" class="a-style">Bio</a>
+          <a href="#" class="a-style">Projects</a>
+        </div>
       </div>
 
       <!-- Small screen -->
-      <div>
+      <div class="d-sm-none flex-grow-1">
         <!-- Hamburger menu w/ site nav links-->
+        <div class="d-flex h-100 justify-content-end pe-4
+        dropdown">
+          <a href="#" class="dropdown-toggle a-style" data-bs-toggle="dropdown"><i class="fa-solid fa-bars"></i></a>
+          <ul class="dropdown-menu dropdown-menu-dark flex-column">
+            <a href="#" class="a-style dropdown-item">Home</a>
+            <a href="#" class="a-style dropdown-item">Projects</a>
+            <a href="#" class="a-style dropdown-item">Bio</a>
+          </ul>
+        </div>
       </div>
     </nav>
 
