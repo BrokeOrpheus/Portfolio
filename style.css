@@ -1,14 +1,20 @@
 /* General */
+body {
+  background-color: #ccc;
+}
 p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
+}
+.heading-style {
+  text-decoration: underline;
 }
 
 /* Navbar */
 nav {
   z-index: 1;
   min-height: 45px;
-  background-color: rgba(200, 200, 200, .8);
+  background-color: rgba(50, 50, 50, .8);
 }
 .dropdown-menu.show {
   display: flex;
@@ -22,11 +28,11 @@ ul a, ul a:hover {
 }
 .a-style {
   text-decoration: none;
-  color: black;
+  color: white;
   opacity: .8;
 }
 .a-style:hover {
-  color: black;
+  color: white;
   opacity: 1;
   transform: scale(1.05)
 }
@@ -42,12 +48,21 @@ i {
 }
 
 /* Hero */
+.hero-img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .hero-img-fluid {
+    max-width: 200%;
+  }
+}
 #hero-text {
   top: 15%;
 }
 #hero-text:hover {
   transform: rotate(360deg);
-  transition: transform 1s ease .2s;
+  transition: transform .5s linear 0s;
 }
 .hero-style {
   color: white;
@@ -92,4 +107,35 @@ i {
   100% {
     transform: translateX(0);
   }
+}
+
+/* Bio */
+#bio {
+  width: 70%;
+}
+#bio img {
+  padding: 5px 0;
+}
+#bio img:hover {
+  transform:rotate(90deg);
+}
+
+/* Projects */
+#projects img {
+  border-radius: 15px;
+}
+#projects a {
+  text-decoration: none;
+}
+.project-btn {
+  font-size: 20px;
+  color: white;
+  border: 1px solid gray;
+  background-color: #333;
+  border-radius: 5px;
+  opacity: .8;
+}
+.project-btn:hover {
+  opacity: 1;
+  transform: scale(1.1)
 }
