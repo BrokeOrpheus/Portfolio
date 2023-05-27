@@ -1,0 +1,34 @@
+.navbar-custom {
+  background-color: rgba(50,50,50,.8);
+}
+
+.nav-item {
+  margin: 7px;
+}
+
+.link-style {
+  text-decoration: none;
+  color: white;
+  opacity: .7;
+}
+
+.link-style:hover {
+  color: white;
+  opacity: 1;
+}
+
+#footer {
+  background-color: #666;
+  color: white;
+  height: 7vh;
+
+  .row {
+    height: inherit;
+  }
+  
+  i {
+    color: black;
+    font-size: 1.5rem;
+  }
+}
+
