@@ -44,8 +44,8 @@ function Footer () {
           <span>Big thanks to Altcademy</span>
         </div>
         <div className='col-6 text-end'>
-          <a href='https://github.com/BrokeOrpheus' target='_blank'><i className="fa-brands fa-github fa-fw me-2"></i></a>
-          <a href='https://www.linkedin.com/in/kyle-register-096143210/' target='_blank'><i className="fa-brands fa-linkedin-in fa-fw"></i></a>
+          <a href='https://github.com/BrokeOrpheus' target='_blank' rel='noreferrer'><i className="fa-brands fa-github fa-fw me-2"></i></a>
+          <a href='https://www.linkedin.com/in/kyle-register-096143210/' target='_blank' rel='noreferrer'><i className="fa-brands fa-linkedin-in fa-fw"></i></a>
         </div>
       </div>
     </div>

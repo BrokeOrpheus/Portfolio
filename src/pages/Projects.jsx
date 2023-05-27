@@ -52,7 +52,7 @@ function Project ({title, img, url}) {
   return(
     <Card className='col-4 text-center my-5 mx-auto'>
       <Card.Header>{title}</Card.Header>
-      <a href={url} target='_blank'>
+      <a href={url} target='_blank' rel='noreferrer'>
         <Card.Img src={img} variant='bottom' />
       </a>
     </Card>
