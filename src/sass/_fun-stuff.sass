@@ -1,0 +1,173 @@
+@use 'variables' as *
+
+
+// Banner
+
+@keyframes banner
+  from
+    right: calc(0% - 5em)
+  to
+    right: 100%
+
+#banner
+  contain: content
+  width: 50%
+  height: 3em
+  padding: .5em
+  margin: 0 auto
+  background: $secondary
+  border: 2px solid black
+  box-shadow: 0 0 8px $secondary
+
+  p
+    position: absolute
+    animation: banner 4s linear infinite
+    width: 5em
+    height: 3em
+    color: black
+    text-decoration: underline overline black 2px
+
+
+// Fun Buttons
+
+#fun-buttons
+  display: flex
+  flex-flow: column wrap
+  align-content: center
+  align-items: center
+  gap: 4em
+  width: 100%
+  padding: 1em
+  margin: 5em auto
+
+@media(min-width: $med)
+  #fun-buttons
+    flex-direction: row
+    justify-content: space-between
+    align-items: end
+    width: 80%
+
+// Cat Button
+
+@keyframes cat-show
+  from
+    top: calc(100% - 2em)
+  to
+    top: 0
+
+@keyframes cat-hide
+  from
+    top: 0
+  to
+    top: calc(100% - 2em)
+
+#cat-btn
+  $cat-width: 5.5em
+  $cat-height: 8em
+
+  display: flex
+  contain: content
+  width: $cat-width
+  height: $cat-height
+  border-radius: 0
+
+  button
+    align-self: end
+    width: $cat-width
+    height: calc(1/4 * $cat-height)
+    color: $secondary
+    background-image: url('../images/black-cat-fur-texture.jpg')
+    background-size: cover
+    border: none
+
+  img
+    z-index: -1
+    position: absolute
+    width: $cat-width
+    height: calc(3/4 * $cat-height)
+    border-radius: 0
+
+.cat-hidden
+  top: calc(100% - 2em)
+
+.cat-show
+  animation: cat-show .5s
+  animation-fill-mode: forwards
+
+.cat-hide
+  animation: cat-hide .5s
+  animation-fill-mode: forwards
+
+
+// Torch
+
+@keyframes torch
+  0%, 100%
+    // initial
+  10%, 90%
+    color: yellow
+    background: yellow
+    border: none
+    box-shadow: 0 0 8px 8px yellow, 0 0 30px 30px #ff9900
+
+.torch
+  height: 3em
+  background: none
+  border-radius: 50%
+  border-style: solid
+
+
+// Firework
+
+@keyframes firework
+  0%
+    z-index: 10
+    top: 0
+  10%
+    top: -30vh
+    box-shadow: 0 0 0 0 pink
+  20%
+    opacity: 1
+    top: -30vh
+    width: 0
+    height: 0
+    box-shadow: 0 0 50px 20px pink
+  75%
+    box-shadow: 0 0 30px 20px pink
+  100%
+    opacity: 0
+    top: -24vh
+    width: 0
+    height: 0
+    box-shadow: 0 0 20px 20px pink
+
+.shoot-firework
+  animation: firework 3s
+
+#firework-div
+  position: relative
+  width: 5em
+  height: 2em
+
+#firework
+  $firework-size: .8em
+
+  z-index: -1
+  position: absolute
+  left: calc(50% - (1/2 * $firework-size))
+  top: calc(50% - (1/2 * $firework-size))
+  width: $firework-size
+  height: $firework-size
+  background: pink
+  border-radius: 50%
+
+#launcher
+  @include fill
+  font-size: 1em
+  color: black
+  border-radius: 5px
+  border-style: solid
+  transition: box-shadow .2s
+
+#launcher:active
+  transform: scale(.95)

@@ -1,0 +1,128 @@
+@use 'variables' as *
+@use 'fun-stuff'
+
+*
+  box-sizing: border-box
+  text-align: center
+  color: $secondary
+  border-radius: 5px
+  
+body
+  padding-top: $nav-height
+  background: $primary
+  border-radius: 0
+
+section
+  margin: 4em $nav-width
+
+.card
+  width: 80%
+  margin: auto
+  background: $dark
+  border: 2px solid $tertiary
+
+  img
+    border-radius: 0 0 5px 5px
+
+i
+  color: $secondary
+
+h1
+  margin: 0 0 1em
+  text-shadow: 0 0 3px $secondary
+
+p
+  font-size: 1.3em
+
+hr
+  opacity: .5
+  margin: 0
+  border-color: $secondary
+  box-shadow: 0 0 5px 1px white
+
+// Nav
+
+@mixin nav-hide
+  top: calc(-2/3 * $nav-height)
+
+nav
+  display: flex
+  flex-direction: column
+  z-index: 100
+  position: fixed
+  @include nav-hide
+  right: 0
+  width: $nav-width
+  height: $nav-height
+
+  div
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: calc($nav-height * 2/3)
+    background: black
+    border-radius: 0
+
+    a
+      width: 100%
+      height: 2em
+      padding-top: .2em
+      border-radius: 0
+      border-bottom: 1px solid $secondary
+
+  button
+    height: calc($nav-height * 1/3)
+    font-size: 15px
+    background: black
+    border: 0
+    border-radius: 0 0 0 5px
+    
+.shown
+  top: 0
+  transition: top .4s
+
+.hidden
+  @include nav-hide
+  transition: top .4s
+
+
+// Intro
+
+#intro
+  margin: 0 $nav-width 5em
+
+
+
+// Showcase
+
+@keyframes glow
+  0%, 100%
+    box-shadow: 0 0 1em $tertiary
+  50%
+    box-shadow: 0 0 3em $tertiary
+
+#showcase .card
+  animation: glow 3s infinite
+
+
+// Project List
+
+#projects
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-around
+  gap: 2em
+
+  .card
+    box-shadow: 0 0 4px $tertiary
+
+@media(min-width: $med)
+  #showcase .card
+    width: 60%
+
+  #projects .card
+    width: 40%
+
+@media(min-width: $lg)
+  #projects .card
+    width: 30%
