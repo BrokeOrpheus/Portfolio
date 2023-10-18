@@ -13,7 +13,8 @@ body
   border-radius: 0
 
 section
-  margin: 4em $nav-width
+  padding: 4em 0
+  margin: 0 $nav-width
 
 .card
   width: 80%
@@ -42,47 +43,52 @@ hr
 
 // Nav
 
-@mixin nav-hide
-  top: calc(-2/3 * $nav-height)
-
 nav
+  $nav-border: 0 0 0 5px
+  $list-height: calc($nav-height * 2/3)
+  $btn-height: calc($nav-height * 1/3)
+
   display: flex
   flex-direction: column
   z-index: 100
   position: fixed
-  @include nav-hide
+  top: calc(-1 * $list-height)
   right: 0
   width: $nav-width
   height: $nav-height
+  border: 1px solid $secondary
+  border-top: 0
+  border-radius: $nav-border
 
   div
     display: flex
     flex-direction: column
     align-items: center
-    height: calc($nav-height * 2/3)
+    height: $list-height
     background: black
     border-radius: 0
 
     a
       width: 100%
-      height: 2em
+      height: calc($list-height/2)
       padding-top: .2em
       border-radius: 0
-      border-bottom: 1px solid $secondary
+      border-top: 1px solid $secondary
 
   button
-    height: calc($nav-height * 1/3)
+    height: $btn-height
     font-size: 15px
     background: black
     border: 0
-    border-radius: 0 0 0 5px
-    
+    border-top: 1px solid $secondary
+    border-radius: $nav-border
+  
 .shown
   top: 0
   transition: top .4s
 
 .hidden
-  @include nav-hide
+  top: calc(-2/3 * $nav-height)
   transition: top .4s
 
 
