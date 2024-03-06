@@ -10,9 +10,15 @@ import movieFinder from '../images/Movie Finder.png';
 import currencyConverter from '../images/Currency Converter.png';
 import htmlBasics from '../images/HTML Basics.png';
 import cssBasics from '../images/CSS Basics.png';
+import soroban from '../images/soroban-practice.png';
 
 
 const projectArray = [
+  {
+    title: 'CSS Basics',
+    img: cssBasics,
+    url: 'https://euphonious-liger-20f40e.netlify.app/'
+  },
   {
     title: 'HTML Basics',
     img: htmlBasics,
@@ -77,7 +83,7 @@ export function Showcase() {
   return(
     <section id='showcase'>
       <h1>Showcase</h1>
-      <Project title='CSS Basics' img={cssBasics} url='https://euphonious-liger-20f40e.netlify.app/' />
+      <Project title='Soroban Practice' img={soroban} url='https://sorobanpractice.netlify.app/' />
     </section>
   )
 }

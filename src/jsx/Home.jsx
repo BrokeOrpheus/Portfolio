@@ -29,12 +29,7 @@ function Navbar () {
         <a href='https://github.com/BrokeOrpheus' target='_blank'><i className="fa-brands fa-github fa-fw"></i></a>
         <a href='https://www.linkedin.com/in/kyle-register-096143210/' target='_blank'><i className='fa-brands fa-linkedin-in fa-fw'></i></a>
       </div>
-      <button onClick={() => setNavHidden(!navHidden)}>
-        {navHidden
-          ? <i className="fa-solid fa-caret-down"></i>
-          : <i className="fa-solid fa-caret-up"></i>
-        }
-      </button>
+      <button onClick={() => setNavHidden(!navHidden)}>Links</button>
     </nav>
   )
 }
@@ -44,7 +39,6 @@ function Intro () {
     <section id='intro'>
       <h1>Welcome.</h1>
       <p>Enjoy my portfolio.</p>
-      <p>Well... at least try to.</p>
     </section>
   )
 }
